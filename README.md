@@ -8,6 +8,7 @@ Requisitos :
  -  XAMPP: Utima versión  ( Se debe clonar  el arhivo en la htdocs)
  -  Node.js
  -  Composer 
+
 Comando necesarios
 - npm install
 - npm run dev
