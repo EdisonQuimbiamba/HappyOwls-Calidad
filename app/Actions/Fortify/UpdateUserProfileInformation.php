@@ -21,7 +21,8 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
         Validator::make($input, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],
-            'photo' => ['nullable', 'mimes:jpg,jpeg,png', 'max:1024'],
+            'phone' => ['required', 'regex:/^((09)|(08))[0-9]{8}/', 'max:10'],   /* regex evalua un campo, debe cumplir una condición dada. */
+            'photo' => ['nullable', 'mimes:jpg,jpeg,png', 'max:1024'],           /* El telefono debe tener un formato: empieza en 09 o 08, después acepta números de 0 al 9 y un tamño de 10  */
         ])->validateWithBag('updateProfileInformation');
 
         if (isset($input['photo'])) {
