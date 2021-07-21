@@ -18,14 +18,13 @@ class User extends Authenticatable
     use Notifiable;
     use TwoFactorAuthenticatable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+    /* Los nombres dentro de este array fillable, son los campos que se guardaran en la base de datos.
+    *  El atributo name del input en la vista debe tener el mismo nombre
+    */
     protected $fillable = [
         'name',
         'email',
+        'phone',
         'password',
     ];
 
