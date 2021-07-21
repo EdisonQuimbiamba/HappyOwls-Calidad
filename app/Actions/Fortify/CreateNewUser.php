@@ -23,7 +23,8 @@ class CreateNewUser implements CreatesNewUsers
         Validator::make($input, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => $this->passwordRules(),
+            'phone' => ['required', 'regex:/^((09)|(08))[0-9]{8}/'], /* regex evalua un campo, debe cumplir una condición dada. */
+            'password' => $this->passwordRules(),                    /* El telefono debe tener un formato: empieza en 09 o 08, después acepta números de 0 al 9 y un tamño de 10  */
             'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['required', 'accepted'] : '',
         ])->validate();
 
