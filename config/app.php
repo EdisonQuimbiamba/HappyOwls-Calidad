@@ -80,7 +80,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'es', /* es-pañol, es la traducción, se encuentra en resources/lang/es */
 
     /*
     |--------------------------------------------------------------------------
