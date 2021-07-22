@@ -1,10 +1,10 @@
 <x-jet-form-section submit="updateProfileInformation">
     <x-slot name="title">
-        {{ __('Profile Information') }}
+        {{ trans('lang.profile_info') }}
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Update your account\'s profile information and email address.') }}
+        {{ trans('lang.profile_info_update') }}
     </x-slot>
 
     <x-slot name="form">
@@ -54,21 +54,21 @@
 
         <!-- Name -->
         <div class="col-span-6 sm:col-span-4">
-            <x-jet-label for="name" value="{{ __('Name') }}" />
+            <x-jet-label for="name" value="{{ trans('auth.name') }}" />
             <x-jet-input id="name" type="text" class="mt-1 block w-full" wire:model.defer="state.name" autocomplete="name" />
             <x-jet-input-error for="name" class="mt-2" />
         </div>
 
         <!-- Email -->
         <div class="col-span-6 sm:col-span-4">
-            <x-jet-label for="email" value="{{ __('Email') }}" />
+            <x-jet-label for="email" value="{{ trans('auth.email') }}" />
             <x-jet-input id="email" type="email" class="mt-1 block w-full" wire:model.defer="state.email" />
             <x-jet-input-error for="email" class="mt-2" />
         </div>
 
         <!-- Phone -->
         <div class="col-span-6 sm:col-span-4"> {{-- sm es para referirse a pantallas pequeñas --}}
-            <x-jet-label for="phone" value="{{ __('Phone') }}" />
+            <x-jet-label for="phone" value="{{ trans('lang.user_phone') }}" />
             <x-jet-input id="phone" type="text" class="mt-1 block w-full" wire:model.defer="state.phone" /> {{-- wire:model.defer sincroniza con el telefono ya guardado --}}
             <x-jet-input-error for="phone" class="mt-2" />
         </div>
@@ -76,11 +76,11 @@
 
     <x-slot name="actions">
         <x-jet-action-message class="mr-3" on="saved">
-            {{ __('Saved.') }}
+            {{ trans('lang.saved') }}
         </x-jet-action-message>
 
         <x-jet-button wire:loading.attr="disabled" wire:target="photo">
-            {{ __('Save') }}
+            {{ trans('lang.save') }}
         </x-jet-button>
     </x-slot>
 </x-jet-form-section>
