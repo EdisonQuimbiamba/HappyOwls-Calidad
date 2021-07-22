@@ -16,31 +16,31 @@
             @csrf
 
             <div>
-                <x-jet-label for="email" value="{{ trans('lang.email') }}"/> 
+                <x-jet-label for="email" value="{{ trans('auth.email') }}" />
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="password" value="{{ trans('lang.password') }}" />
+                <x-jet-label for="password" value="{{ trans('auth.password') }}" />
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
             </div>
 
             <div class="block mt-4">
                 <label for="remember_me" class="flex items-center">
                     <x-jet-checkbox id="remember_me" name="remember" />
-                    <span class="ml-2 text-sm text-gray-600">{{ trans('lang.remember_me') }}</span>
+                    <span class="ml-2 text-sm text-gray-600">{{ trans('auth.remember_me') }}</span>
                 </label>
             </div>
 
             <div class="flex items-center justify-end mt-4">
                 @if (Route::has('password.request'))
                     <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ trans('lang.forgot_your_password?') }}
+                        {{ trans('auth.forgot_password') }}
                     </a>
                 @endif
 
                 <x-jet-button class="ml-4">
-                    {{ trans('lang.log_in') }}
+                    {{ trans('auth.login') }}
                 </x-jet-button>
             </div>
         </form>

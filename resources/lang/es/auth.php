@@ -2,7 +2,7 @@
 
 return [
     'agree'                     => 'acepto los términos',
-    'already_member'            => 'Ya tengo una membresía',
+    'already_member'            => 'Ya estoy registrado',
     'email'                     => 'Dirección de correo electrónico',
     'failed'                    => 'Estas credenciales no coinciden con nuestros registros.',
     'forgot_password'           => 'Olvidé mi contraseña',
