@@ -13,7 +13,7 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
-                        <i class='bx bx-home text-2xl' ></i>
+                        <i class='bx bx-home px-1'></i> <span>{{ trans('lang.home') }}</span> 
                     </x-jet-nav-link>
                 </div>
             </div>
