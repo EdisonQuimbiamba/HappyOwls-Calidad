@@ -48,4 +48,5 @@ return [
     'done'                          => 'Hecho.',
     'session_conf_pas_msg'          => 'Ingrese su contraseña para confirmar que desea cerrar la sesión de sus otras sesiones de navegador en todos sus dispositivos.',
     
+    'whoops'                       => '¡Ups! Algo salió mal.'
 ];
