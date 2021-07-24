@@ -6,7 +6,7 @@
        
     <div id="form"  class="invisible w-screen flex flex-col sm:justify-center pt-6 container sm:pt-0 bg-gray-100 mt-3">
         <div class="bg-white shadow p-3 mb-5 bg-body rounded-md">
-            <form method="" action="">
+            {!! Form::open(['route' => 'dashboard.events.store', 'autocomplete' => 'off', 'files' => true]) !!}
                 @csrf
     
                 <div>
@@ -25,15 +25,14 @@
                     </div>
 
                     <div class="w-full pt-2"> 
-                        <input accept="image/*" type='file' id="imgEventInp" />
+                        <input accept="image/*" type='file' id="imgEventInp" required/>
                     </div>
-    
-                <div class="flex items-center justify-end mt-4">
-                    <x-jet-button class="ml-4">
-                        publicar
-                    </x-jet-button>
-                </div>
-            </form>
+
+                    <div class="flex items-center justify-end">
+                        {!! Form::submit('publicar', ['class' => 'mt-4 ml-4 inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25 transition']) !!}
+                    </div>
+                
+                {!! Form::close() !!}
         </div>
     </div>
 
