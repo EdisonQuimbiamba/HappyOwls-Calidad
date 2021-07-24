@@ -20,3 +20,6 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/home', function () {
     return view('home');
 })->name('home');
+
+
+Route::resource('events', EventController::class)->names('dashboard.events');
