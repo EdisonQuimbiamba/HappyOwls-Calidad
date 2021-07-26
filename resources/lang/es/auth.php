@@ -30,5 +30,7 @@ return [
     'throttle'                  => 'Demasiados intentos de acceso. Por favor intente nuevamente en: segundos segundos. ',
     'forget_password'           => '¿Olvidaste tu contraseña? No hay problema. Simplemente díganos su dirección de correo electrónico y le enviaremos un enlace para restablecer la contraseña que le permitirá elegir una nueva.',
     'cancel'                    => 'Cancelar',
-    'confirm'                   => 'Confirmar'
+    'confirm'                   => 'Confirmar',
+    'register?'                 => '¿No tienes cuenta?',
+    'login?'                    => '¿Ya tienes cuenta'
 ];

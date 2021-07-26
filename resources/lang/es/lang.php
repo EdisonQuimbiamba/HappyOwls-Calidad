@@ -50,5 +50,7 @@ return [
     
     'whoops'                        => '¡Ups! Algo salió mal.',
     'home'                          => 'Página principal',
-    'events'                        => 'Eventos'
+    'events'                        => 'Eventos',
+    'want_pub?'                     => '¿Quieres publicar algo?',
+    'titleEvent'                    => 'Título del evento'
 ];
