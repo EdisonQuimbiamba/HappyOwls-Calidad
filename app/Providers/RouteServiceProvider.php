@@ -46,11 +46,6 @@ class RouteServiceProvider extends ServiceProvider
             Route::middleware('web')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/web.php'));
-
-            Route::middleware('web')
-                ->prefix('dashboard') /* Todo lo que empieza con dashboard */
-                ->namespace($this->namespace)
-                ->group(base_path('routes/dashboard.php')); /* Configuración del dir de las rutas para dashboard */
         });
     }
 
