@@ -37,12 +37,6 @@
                         <small class="text-danger">{{ $message }}</small>
                     @enderror
                 </div>
-                <div class="col">
-                    {!! Form::text('slug', null, ['class' => 'form-control border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm', 'placeholder' => 'Slug', 'autocomplete' => 'off']) !!}
-                    @error('slug')
-                        <small class="text-danger">{{ $message }}</small>
-                    @enderror
-                </div>
             </div>
 
             {{-- Input oculto --}}

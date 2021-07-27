@@ -31,14 +31,9 @@ class EventRequest extends FormRequest
 
         $rules = [
             'title' => 'required|max:255',
-            'slug' => 'required|unique:events|max:255',
             'body' => 'required',
-            'file' => 'image'
+            'file' => 'required|image|mimes:jpeg,png,jpg|max:2048'
         ];
-
-        if ($event) {
-            $rules['slug'] = 'required|unique:events,slug,'.$event->id;
-        }
         
         return $rules;
     }

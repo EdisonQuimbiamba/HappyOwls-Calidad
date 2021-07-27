@@ -27,7 +27,7 @@ class EventController extends Controller
                 'url' => $url
             ]);
         }
-        return view('home');
+        return redirect('/home');
     }
 
     public function show($id)
