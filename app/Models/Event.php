@@ -10,8 +10,9 @@ class Event extends Model
     use HasFactory;
 
 
-    protected $fillable = ['title','slug','body']; //Lo que se enviará a la bd
-
+    //Guarded es para evitar meter un campo a la bd
+    protected $guarded = ['id', 'created_at', 'updated_at'];
+    
     //Relación uno a uno polimorfica
     public function image()
     {

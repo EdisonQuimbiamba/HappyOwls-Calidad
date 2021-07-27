@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\EventRequest;
+use App\Models\Event;
+use Illuminate\Support\Facades\Storage;
 
 class EventController extends Controller
 {
@@ -17,7 +19,15 @@ class EventController extends Controller
 
     public function store(EventRequest $request)
     {
-        
+        $events = Event::create($request->all());
+
+        if ($request->file('file')) {
+            $url = Storage::put('events', $request->file('file'));
+            $events->image()->create([
+                'url' => $url
+            ]);
+        }
+        return view('home');
     }
 
     public function show($id)
