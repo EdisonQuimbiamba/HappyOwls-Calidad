@@ -6,7 +6,7 @@
             <div class="w-full max-w-md mx-auto bg-white shadow-md rounded-md px-6 py-4 my-6">
                 <div class="sm:flex sm:justify-between">
                     <div class="flex items-center">
-                        <img class="h-12 w-12 rounded-full" src="https://lh3.googleusercontent.com/a-/AOh14Gi0DgItGDTATTFV6lPiVrqtja6RZ_qrY91zg42o-g" alt="">
+                        <img class="h-12 w-12 rounded-full" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
                         <div class="ml-2">
                             <h3 class="text-lg text-gray-800 font-medium">
                                 {{Str::limit($event->user->name, 25)}}</h3>
