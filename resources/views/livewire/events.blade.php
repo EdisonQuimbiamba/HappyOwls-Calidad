@@ -20,12 +20,12 @@
                             </div>
                         </div>
                         <div class="col">
-                            <textarea  name="bodyEvent" id="bodyEvent" class="w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm" rows="5" required placeholder="Descripción del evento"></textarea>
+                            <textarea  name="body" id="body" class="w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm" rows="5" required placeholder="{{trans('lang.desp_event')}}"></textarea>
                         </div>
                     </div>
 
                     <div class="w-full pt-2"> 
-                        <input accept="image/*" type='file' id="imgEventInp" required/>
+                        <input accept="image/*" type='file' id="imgEventInp" required name="file"/>
                     </div>
 
                     <div class="flex items-center justify-end">

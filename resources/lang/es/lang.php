@@ -53,5 +53,6 @@ return [
     'events'                        => 'Eventos',
     'want_pub?'                     => '¿Quieres publicar algo?',
     'titleEvent'                    => 'Título del evento',
-    'ImgEvent'                      => 'Imagen del evento'
+    'ImgEvent'                      => 'Imagen del evento',
+    'desp_event'                    => 'Descripción del evento',
 ];

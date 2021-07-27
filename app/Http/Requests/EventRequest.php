@@ -23,8 +23,19 @@ class EventRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            //
+        $event = $this->route()->parameter('post'); //Si lo que le mando es por el método POST
+
+        $rules = [
+            'title' => 'required',
+            'slug' => 'required|unique:events',
+            'body' => 'required',
+            'file' => 'image'
         ];
+
+        if ($event) {
+            $rules['slug'] = 'required|unique:events,slug,'.$event->id;
+        }
+        
+        return $rules;
     }
 }
