@@ -13,7 +13,11 @@ class EventRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        if ($this->user_id == auth()->user()->id) { //Usuario autenticado
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
@@ -26,8 +30,8 @@ class EventRequest extends FormRequest
         $event = $this->route()->parameter('post'); //Si lo que le mando es por el método POST
 
         $rules = [
-            'title' => 'required',
-            'slug' => 'required|unique:events',
+            'title' => 'required|max:255',
+            'slug' => 'required|unique:events|max:255',
             'body' => 'required',
             'file' => 'image'
         ];
