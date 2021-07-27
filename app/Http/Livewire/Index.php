@@ -11,7 +11,7 @@ class Index extends Component
     public function render()
     {
         $events = Event::latest('updated_at')->get();
- 
+        
         return view('livewire.index', compact('events'));
     }
 }

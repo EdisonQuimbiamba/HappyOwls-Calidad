@@ -1,10 +1,7 @@
 <div class="container py-8 ">
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">        
         @foreach ($events as $event)  
-
         <div class="container mx-auto px-4 d-flex align-items-stretch">
             <div class="w-full max-w-md mx-auto bg-white shadow-md rounded-md px-6 py-4 my-6">
                 <div class="sm:flex sm:justify-between">
@@ -17,19 +14,16 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="flex justify-between items-center mt-4 row">
                     <div class="col">
-                        <h4 class="mt-2 text-xl font-medium text-black text-break">{{Str::limit($event->title, 50)}}</h4> 
+                        <h4 class="mt-2 text-xl font-medium text-black text-break">{{Str::limit($event->title, 70)}}</h4> 
                     </div> 
-                </div>
-                
+                </div>                
                 <div class="mt-3"> 
-                    <p class="text-gray-400 text-sm text-break">{{ Str::limit($event->body, 500) }}</p>
-                </div> 
+                    <p class="text-gray-400 text-sm text-break">{{ Str::limit($event->body, 150) }}</p>
+                </div>
             </div>
         </div>
         @endforeach
-
     </div>
 </div>
