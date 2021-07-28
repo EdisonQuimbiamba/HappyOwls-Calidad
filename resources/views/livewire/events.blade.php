@@ -24,7 +24,7 @@
                 <div class="col">
                     <textarea name="body" id="body"
                         class="w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"
-                        rows="9" required placeholder="{{ trans('lang.desp_event') }}"></textarea>
+                        rows="9" placeholder="{{ trans('lang.desp_event') }}"></textarea>
                     @error('body')
                         <small class="text-danger">{{ $message }}</small>
                     @enderror
@@ -32,7 +32,7 @@
             </div>
             <div class="row">
                 <div class="col col-lg-4 pt-2">
-                    <input accept="image/*" type='file' id="imgEventInp" required name="file" />
+                    <input accept="image/*" type='file' id="imgEventInp" name="file" />
                     @error('file')
                         <small class="text-danger">{{ $message }}</small>
                     @enderror
@@ -44,6 +44,9 @@
 
             <div class="flex items-center justify-end">
                 {!! Form::submit('publicar', ['class' => 'mt-4 ml-4 inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25 transition']) !!}
+                <button type="reset"
+                    class="mt-4 ml-4 inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25 transition"
+                    id="cancelar"> Cancelar</button>
             </div>
 
             {!! Form::close() !!}
@@ -55,19 +58,28 @@
     <script>
         let btn = document.querySelector("#btn");
         let form = document.querySelector("#form");
+        let cancelar = document.querySelector("#cancelar");
+
+        cancelar.onclick = () => {
+            OpenOrClose()
+        }
 
         btn.onclick = () => {
-            if (form.classList.contains("hidden")) {
-                form.classList.remove("hidden")
-                form.classList.toggle("visible")
-            } else {
-                form.classList.toggle("hidden")
-            }
+            OpenOrClose()
         }
         imgEventInp.onchange = evt => {
             const [file] = imgEventInp.files
             if (file) {
                 imageEvent.src = URL.createObjectURL(file)
+            }
+        }
+
+        function OpenOrClose() {
+            if (form.classList.contains("hidden")) {
+                form.classList.remove("hidden")
+                form.classList.toggle("visible")
+            } else {
+                form.classList.toggle("hidden")
             }
         }
 
