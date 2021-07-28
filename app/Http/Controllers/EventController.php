@@ -34,8 +34,9 @@ class EventController extends Controller
         }
     }
 
-    public function show($id)
-    {
+    public function show(Event $event)
+    {        
+        return view('events.show',compact('event'));
     }
 
     public function edit($id)

@@ -17,8 +17,8 @@
                     </div>
                     <div class="flex justify-between items-center mt-4 row">
                         <div class="col">
-                            <h4 class="mt-2 text-xl font-medium text-black text-break">
-                                {{ Str::limit($event->title, 70) }}</h4>
+                            <a href="{{route('dashboard.events.show', $event)}}"
+                                class="leading-tight text-black hover:text-black no-underline hover:underline mt-2 text-xl font-medium text-break">{{ Str::limit($event->title, 70) }}</a>
                         </div>
                     </div>
                     <div class="row">
@@ -27,16 +27,15 @@
                         </div>
                         <div class="col col-lg-6 image-wrapper flex justify-center">
                             @if ($event->image)
-                                <img class="w-full h-full"
-                                    src="{{ asset("storage/".$event->image->url) }}" alt="{{$event->title}}">
+                                <img class="w-full h-full" src="{{ asset('storage/' . $event->image->url) }}"
+                                    alt="{{ $event->title }}">
                             @else
-                                <img class="w-full h-full"
-                                    src="https://picsum.photos/300/300" alt="">
+                                <img class="w-full h-full" src="https://picsum.photos/300/300" alt="">
                             @endif
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
         @endforeach
     </div>
 </div>
