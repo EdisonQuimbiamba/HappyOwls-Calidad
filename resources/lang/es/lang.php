@@ -55,4 +55,7 @@ return [
     'titleEvent'                    => 'Título del evento',
     'ImgEvent'                      => 'Imagen del evento',
     'desp_event'                    => 'Descripción del evento',
+    'success_msg_created_event'     => 'Evento creado satisfactoriamente!',
+    'error_created_event'           => 'Error al crear el evento',
+    'check_form_error'              => 'Por favor revise el formulario a continuación para ver si hay errores'
 ];

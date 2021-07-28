@@ -32,6 +32,8 @@
 
             <!-- Page Content -->
             <main>
+                @include('flash-message')
+                @yield('content')
                 {{ $slot }}
             </main>
         </div>

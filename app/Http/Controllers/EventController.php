@@ -19,15 +19,19 @@ class EventController extends Controller
 
     public function store(EventRequest $request)
     {
-        $events = Event::create($request->all());
+        if ($request) {
+            $events = Event::create($request->all());
 
-        if ($request->file('file')) {
-            $url = Storage::put('events', $request->file('file'));
-            $events->image()->create([
-                'url' => $url
-            ]);
+            if ($request->file('file')) {
+                $url = Storage::put('events', $request->file('file'));
+                $events->image()->create([
+                    'url' => $url
+                ]);
+            }
+            return redirect('/home')->with('success', trans('lang.success_msg_created_event'));
+        } else {
+            return redirect('/home')->with('error', trans('lang.error_created_event'));
         }
-        return redirect('/home');
     }
 
     public function show($id)
