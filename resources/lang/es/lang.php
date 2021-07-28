@@ -54,6 +54,7 @@ return [
     'event'                         => 'Evento',
     'event_created_by'              => 'Creado por',
     'want_pub?'                     => '¿Quieres publicar algo?',
+    'date_event'                    => 'Fecha del evento',
     'created_event'                 => 'Crear evento',
     'post_event'                    => 'Publicar evento',
     'titleEvent'                    => 'Título del evento',
