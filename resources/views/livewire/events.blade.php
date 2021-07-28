@@ -10,7 +10,7 @@
             @csrf
 
             <div>
-                {!! Form::text('title', null, ['class' => 'form-control border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm', 'placeholder' => 'Título del evento', 'autocomplete' => 'off']) !!}
+                <input name="title" id="title"class ='form-control border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm'placeholder = 'Título del evento'autocomplete> 
                 @error('title')
                     <small class="text-danger">{{ $message }}</small>
                 @enderror
@@ -67,6 +67,7 @@
         btn.onclick = () => {
             OpenOrClose()
         }
+
         imgEventInp.onchange = evt => {
             const [file] = imgEventInp.files
             if (file) {
