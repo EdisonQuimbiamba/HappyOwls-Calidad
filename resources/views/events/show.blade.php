@@ -9,7 +9,11 @@
                 <img class="h-full object-cover md:w-7/12" src="https://picsum.photos/300/300" alt="">
             @endif
             <div class="p-8">
-                <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Evento</div>
+                <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{{trans('lang.event')}}</div>
+                <div class="text-xs d-flex justify-content-end text-gray-600">
+                    <span class="uppercase mr-1">{{trans('lang.event_created_by')}}</span>
+                    <span> {{ Str::limit($event->user->name, 25) }}</span>
+                </div>
                 <h2 class="text-xl text-black text-break">{{ $event->title }}</h2>
                 <p class="mt-2 text-gray-400 text-break">{{ $event->body }}</p>
             </div>

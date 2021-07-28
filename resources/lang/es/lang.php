@@ -51,6 +51,8 @@ return [
     'whoops'                        => '¡Ups! Algo salió mal.',
     'home'                          => 'Página principal',
     'events'                        => 'Eventos',
+    'event'                         => 'Evento',
+    'event_created_by'              => 'Creado por',
     'want_pub?'                     => '¿Quieres publicar algo?',
     'created_event'                 => 'Crear evento',
     'post_event'                    => 'Publicar evento',
