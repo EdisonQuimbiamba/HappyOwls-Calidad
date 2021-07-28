@@ -32,7 +32,8 @@ class EventRequest extends FormRequest
         $rules = [
             'title' => 'required|max:255',
             'body' => 'required',
-            'file' => 'image|mimes:jpeg,png,jpg|max:2048'
+            'file' => 'image|mimes:jpeg,png,jpg|max:2048',
+            'event_date' => 'required|date'
         ];
         
         return $rules;
