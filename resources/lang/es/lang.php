@@ -52,6 +52,8 @@ return [
     'home'                          => 'Página principal',
     'events'                        => 'Eventos',
     'want_pub?'                     => '¿Quieres publicar algo?',
+    'created_event'                 => 'Crear evento',
+    'post_event'                    => 'Publicar evento',
     'titleEvent'                    => 'Título del evento',
     'ImgEvent'                      => 'Imagen del evento',
     'desp_event'                    => 'Descripción del evento',
