@@ -70,5 +70,14 @@
                 imageEvent.src = URL.createObjectURL(file)
             }
         }
+
+        /*Función para cerrar el formulario de crear un evento con la tecla ESC*/
+
+        $(document).on('keydown', function(event) {
+            if (event.key == "Escape" && form.classList.contains("visible")) {
+                form.classList.remove("visible")
+                form.classList.toggle("hidden")
+            }
+        });
     </script>
 </div>
