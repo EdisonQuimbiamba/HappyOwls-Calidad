@@ -34,7 +34,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="start">{{trans('lang.date_event')}}</label>
-                        {!! Form::input('dateTime-local','event_date', date("Y-m-d\TH:i"),  ['class' => 'form-control datepicker','autocomplete'=>'off','min' => date('Y-m-d\TH:i')]) !!}</div>
+                        {!! Form::input('dateTime-local','event_date', date("Y-m-d\TH:i",strtotime($date)),  ['class' => 'form-control datepicker','autocomplete'=>'off','min' => $date]) !!}</div>
                     <div class="mb-3">
                         <textarea class="form-control" id="body" name="body"
                             placeholder="{{ trans('lang.desp_event') }}" rows="5"></textarea>

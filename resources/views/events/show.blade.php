@@ -11,7 +11,7 @@
             <div class="p-8">
                 <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{{ trans('lang.event') }}
                 </div>
-                @if ($event->event_date > new \DateTime())
+                @if ($event->event_date > $date)
                     <p class="text-red-400 text-xs">{{trans('lang.event_finish')}}</p>
                 @else
                     <p class="text-blue-400 text-xs">{{trans('lang.start')}}
