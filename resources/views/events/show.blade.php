@@ -6,7 +6,7 @@
                 <img class="h-full object-cover md:w-7/12" src="{{ asset('storage/' . $event->image->url) }}"
                     alt="{{ $event->title }}">
             @else
-                <img class="h-full object-cover md:w-7/12" src="https://picsum.photos/300/300" alt="">
+                <img class="h-full object-cover md:w-7/12" src="{{asset('image/logo.png')}}" alt="">
             @endif
             <div class="p-8">
                 <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{{ trans('lang.event') }}
@@ -14,7 +14,8 @@
                 @if (strtotime($event->event_date) < strtotime($date))
                     <p class="text-red-400 text-xs">
                         {{ trans('lang.event_finish') }}
-                        {{ date('jS \of F Y h:i:s A', strtotime($event->event_date)) }}
+                        {{\Carbon\Carbon::parse($event->event_date)->format('jS \of F Y h:i:s A')}}
+                        {{-- {{ date('jS \of F Y h:i:s A', strtotime($event->event_date)) }} --}}
                     </p>
                 @else
                     <p class="text-blue-400 text-xs">

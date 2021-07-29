@@ -42,7 +42,7 @@
                                 <img class="w-full h-full" src="{{ asset('storage/' . $event->image->url) }}"
                                     alt="{{ $event->title }}">
                             @else
-                                <img class="w-full h-full" src="https://picsum.photos/300/300" alt="">
+                                <img class="w-10/12 h-full " src="{{asset('image/logo.png')}}" alt="">
                             @endif
                         </div>
                     </div>
