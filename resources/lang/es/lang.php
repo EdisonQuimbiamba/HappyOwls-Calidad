@@ -54,8 +54,8 @@ return [
     'event'                         => 'Evento',
     'event_created_by'              => 'Creado por',
     'published'                     => 'Publicado',
-    'start'                         => 'Comienza',
-    'event_finish'                  => 'El evento ya acabo',
+    'start'                         => 'Sera el',
+    'event_finish'                  => 'El evento ya acabo el ',
     'want_pub?'                     => '¿Quieres publicar algo?',
     'date_event'                    => 'Fecha del evento',
     'created_event'                 => 'Crear evento',
@@ -66,5 +66,5 @@ return [
     'success_msg_created_event'     => 'Evento creado satisfactoriamente!',
     'error_created_event'           => 'Error al crear el evento',
     'check_form_error'              => 'Por favor revise el formulario a continuación para ver si hay errores',
-    'select_img'                    => 'Selecciona una imagen'
+    'select_img'                    => 'Selecciona una imagen',
 ];

@@ -13,11 +13,11 @@
                                     {{ Str::limit($event->user->name, 25) }}</h3>
                                 <span class="text-gray-600">{{ trans('lang.published') }}
                                     {{ $event->created_at->diffForHumans() }}</span>
-                                @if ($event->event_date > new \DateTime())
-                                    <p class="text-red-400 text-xs">{{trans('lang.event_finish')}}</p>
+                                @if (strtotime($event->event_date) < strtotime($date))
+                                    <p class="text-red-400 text-xs">{{trans('lang.event_finish').$event->event_date}}</p>
                                 @else
                                     <p class="text-blue-400 text-xs">{{trans('lang.start')}}
-                                        {{ \Carbon\Carbon::parse($event->event_date)->diffForHumans() }}</p>
+                                        {{ date("jS \of F Y h:i:s A", strtotime($event->event_date)) }}</p>
                                 @endif
                             </div>
                         </div>

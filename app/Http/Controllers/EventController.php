@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\EventRequest;
 use App\Models\Event;
+use App\Http\Controllers\DateTimeZoneController;
 use Illuminate\Support\Facades\Storage;
 
 class EventController extends Controller
@@ -35,8 +36,11 @@ class EventController extends Controller
     }
 
     public function show(Event $event)
-    {        
-        return view('events.show',compact('event'));
+    {
+        $obj = new DateTimeZoneController();
+        $date = $obj->getDateTimeZone();
+
+        return view('events.show', compact('event', 'date'));
     }
 
     public function edit($id)
