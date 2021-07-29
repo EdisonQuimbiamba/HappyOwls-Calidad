@@ -12,10 +12,15 @@
                 <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{{ trans('lang.event') }}
                 </div>
                 @if (strtotime($event->event_date) < strtotime($date))
-                    <p class="text-red-400 text-xs">{{trans('lang.event_finish').$event->event_date}}</p>
+                    <p class="text-red-400 text-xs">
+                        {{ trans('lang.event_finish') }}
+                        {{ date('jS \of F Y h:i:s A', strtotime($event->event_date)) }}
+                    </p>
                 @else
-                    <p class="text-blue-400 text-xs">{{trans('lang.start')}}
-                        {{ \Carbon\Carbon::parse($event->event_date)->diffForHumans() }}</p>
+                    <p class="text-blue-400 text-xs">
+                        {{ trans('lang.start') }}
+                        {{ date('jS \of F Y h:i:s A', strtotime($event->event_date)) }}
+                    </p>
                 @endif
                 <div class="text-xs text-gray-600">
                     <span class="uppercase mr-1">{{ trans('lang.event_created_by') }}</span>

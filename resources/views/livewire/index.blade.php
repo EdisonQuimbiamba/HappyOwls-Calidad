@@ -14,10 +14,15 @@
                                 <span class="text-gray-600">{{ trans('lang.published') }}
                                     {{ $event->created_at->diffForHumans() }}</span>
                                 @if (strtotime($event->event_date) < strtotime($date))
-                                    <p class="text-red-400 text-xs">{{trans('lang.event_finish').$event->event_date}}</p>
+                                    <p class="text-red-400 text-xs">
+                                        {{trans('lang.event_finish')}}
+                                        {{ date("jS \of F Y h:i:s A", strtotime($event->event_date)) }}
+                                    </p>
                                 @else
-                                    <p class="text-blue-400 text-xs">{{trans('lang.start')}}
-                                        {{ date("jS \of F Y h:i:s A", strtotime($event->event_date)) }}</p>
+                                    <p class="text-blue-400 text-xs">
+                                        {{trans('lang.start')}}
+                                        {{ date("jS \of F Y h:i:s A", strtotime($event->event_date)) }}
+                                    </p>
                                 @endif
                             </div>
                         </div>
