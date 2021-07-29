@@ -11,7 +11,7 @@ class Index extends Component
 {
     public function render()
     {
-        $events = Event::latest('updated_at')->get();
+        $events = Event::latest('updated_at')->paginate(6);
 
         $obj = new DateTimeZoneController();
         $date = $obj->getDateTimeZone();

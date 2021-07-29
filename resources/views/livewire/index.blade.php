@@ -6,8 +6,8 @@
                 <div class="w-full max-w-md mx-auto bg-white shadow-md rounded-md px-6 py-4 my-6">
                     <div class="sm:flex sm:justify-between">
                         <div class="d-flex">
-                            <img class="h-12 w-12 rounded-full d-flex align-items-center" src="{{ Auth::user()->profile_photo_url }}"
-                                alt="{{ Auth::user()->name }}" />
+                            <img class="h-12 w-12 rounded-full d-flex align-items-center"
+                                src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
                             <div class="ml-2">
                                 <h3 class="text-lg text-gray-800 font-medium">
                                     {{ Str::limit($event->user->name, 25) }}</h3>
@@ -15,13 +15,13 @@
                                     {{ $event->created_at->diffForHumans() }}</span>
                                 @if (strtotime($event->event_date) < strtotime($date))
                                     <p class="text-red-400 text-xs">
-                                        {{trans('lang.event_finish')}}
-                                        {{ date("jS \of F Y h:i:s A", strtotime($event->event_date)) }}
+                                        {{ trans('lang.event_finish') }}
+                                        {{ date('jS \of F Y h:i:s A', strtotime($event->event_date)) }}
                                     </p>
                                 @else
                                     <p class="text-blue-400 text-xs">
-                                        {{trans('lang.start')}}
-                                        {{ date("jS \of F Y h:i:s A", strtotime($event->event_date)) }}
+                                        {{ trans('lang.start') }}
+                                        {{ date('jS \of F Y h:i:s A', strtotime($event->event_date)) }}
                                     </p>
                                 @endif
                             </div>
@@ -50,4 +50,5 @@
             </div>
         @endforeach
     </div>
+    {{ $events->links() }}
 </div>

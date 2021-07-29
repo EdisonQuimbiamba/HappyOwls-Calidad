@@ -67,4 +67,9 @@ return [
     'error_created_event'           => 'Error al crear el evento',
     'check_form_error'              => 'Por favor revise el formulario a continuación para ver si hay errores',
     'select_img'                    => 'Selecciona una imagen',
+    
+    'Showing'                       => 'Mostrando',
+    'to'                            => 'de',
+    'of'                            => 'de',
+    'results'                       => 'resultados'
 ];
