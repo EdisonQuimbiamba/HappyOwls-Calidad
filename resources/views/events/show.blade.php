@@ -3,7 +3,7 @@
     <div class="max-w-lg mx-auto mt-8 bg-white rounded-xl shadow-md overflow-hidden md:max-w-6xl mb-4">
         <div class="md:flex">
             @if ($event->image)
-                <img class="h-full object-cover md:w-7/12" src="{{ asset('/storage' . $event->image->url) }}"
+                <img class="h-full object-cover md:w-7/12" src="{{ asset('storage/' . $event->image->url) }}"
                     alt="{{ $event->title }}">
             @else
                 <img class="h-full object-cover md:w-7/12" src="{{asset('image/logo.png')}}" alt="">
