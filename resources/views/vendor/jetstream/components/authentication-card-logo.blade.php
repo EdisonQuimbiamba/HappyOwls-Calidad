@@ -1,3 +1,3 @@
 <a href="/home">
-    <img {{ $attributes }} src="{{asset('/image/logo.png')}}">
+    <img style="width:400px" src="{{asset('/image/logo_inicio.png')}}">
 </a>
