@@ -73,5 +73,8 @@ return [
     'of'                            => 'de',
     'results'                       => 'resultados',
     'select_new_photo'              => 'Seleccionar una nueva foto',
-    'remove_photo'                  => 'Remover la foto actual'
+    'remove_photo'                  => 'Remover la foto actual',
+    'The provided password does not match your current password.' => 'La contraseña proporcionada no coincide con su contraseña actual.',
+    'The contraseña must be at least 8 characters.' => 'La contraseña debe tener al menos 8 caracteres.',
+    'La confirmación de contraseña no coincide.' => 'La confirmación de contraseña no coincide.'
 ];
