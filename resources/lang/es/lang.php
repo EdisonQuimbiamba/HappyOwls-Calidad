@@ -71,5 +71,7 @@ return [
     'Showing'                       => 'Mostrando',
     'to'                            => 'de',
     'of'                            => 'de',
-    'results'                       => 'resultados'
+    'results'                       => 'resultados',
+    'select_new_photo'              => 'Seleccionar una nueva foto',
+    'remove_photo'                  => 'Remover la foto actual'
 ];

@@ -28,7 +28,7 @@
                 <x-jet-label for="password" value="{{ trans('auth.password') }}" />
                 <div class="py-2" x-data="{ show: true }">
                     <div class="relative">
-                      <input id="password" name="password" required autocomplete="current-password" :type="show ? 'password' : 'text'" class="text-md block px-3 py-2 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+                      <input id="password" name="password" required :type="show ? 'password' : 'text'" class="text-md block px-3 py-2 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
 
                       <div class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">    
                         
@@ -57,7 +57,7 @@
                 <x-jet-label for="password_confirmation" value="{{ trans('auth.password_confirmation') }}" />
                 <div class="py-2" x-data="{ show: true }">
                     <div class="relative">
-                      <input id="password" name="password" required autocomplete="current-password" :type="show ? 'password' : 'text'" class="text-md block px-3 py-2 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+                      <input id="password_confirmation" name="password_confirmation" required :type="show ? 'password' : 'text'" class="text-md block px-3 py-2 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
 
                       <div class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">    
                         

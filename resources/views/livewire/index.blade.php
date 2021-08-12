@@ -6,9 +6,14 @@
                 <div class="w-full max-w-md mx-auto bg-white shadow-md rounded-md px-6 py-4 my-6">
                     <div class="sm:flex sm:justify-between">
                         <div class="d-flex">
-                            <img class="h-12 w-12 rounded-full d-flex align-items-center"
-                                src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
-                            <div class="ml-2">
+                            @if (!$event->user->profile_photo_path)
+                                <img class="h-12 w-12 rounded-full d-flex align-items-center"
+                                src="{{asset('image/logo.png')}}" alt="" />
+                            @else
+                                <img class="h-12 w-12 rounded-full d-flex align-items-center"
+                                src="{{ asset('storage/' . $event->user->profile_photo_path) }}" alt="{{ $event->user->profile_photo_path }}" />
+                            @endif
+                                <div class="ml-2">
                                 <h3 class="text-lg text-gray-800 font-medium">
                                     {{ Str::limit($event->user->name, 25) }}</h3>
                                 <span class="text-gray-600">{{ trans('lang.published') }}
