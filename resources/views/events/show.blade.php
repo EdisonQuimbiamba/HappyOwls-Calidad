@@ -14,13 +14,13 @@
                 @if (strtotime($event->event_date) < strtotime($date))
                     <p class="text-red-400 text-xs">
                         {{ trans('lang.event_finish') }}
-                        {{ \Carbon\Carbon::parse($event->event_date)->diffForHumans(null, false, false, 2) }}
+                        {{ \Carbon\Carbon::parse($event->event_date)->diffForHumans($date) }}
                         {{date("d/m/Y H:i:s", strtotime($event->event_date))}}
                     </p>
                 @else
                     <p class="text-blue-400 text-xs">
                         {{ trans('lang.start') }}
-                        {{ \Carbon\Carbon::parse($event->event_date)->diffForHumans(null, false, false, 2) }}
+                        {{ \Carbon\Carbon::parse($event->event_date)->diffForHumans($date) }}
                         {{date("d/m/Y H:i:s", strtotime($event->event_date))}}
                     </p>
                 @endif

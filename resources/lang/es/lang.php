@@ -47,15 +47,15 @@ return [
     'close_se_o'                    => 'Cerrar sesión en otras sesiones del navegador',
     'done'                          => 'Hecho.',
     'session_conf_pas_msg'          => 'Ingrese su contraseña para confirmar que desea cerrar la sesión de sus otras sesiones de navegador en todos sus dispositivos.',
-
+    
     'whoops'                        => '¡Ups! Algo salió mal.',
     'home'                          => 'Página principal',
     'events'                        => 'Eventos',
     'event'                         => 'Evento',
     'event_created_by'              => 'Creado por',
     'published'                     => 'Publicado',
-    'start'                         => 'Sera',
-    'event_finish'                  => 'Fue',
+    'start'                         => 'Sera en',
+    'event_finish'                  => 'Fue hace',
     'want_pub?'                     => '¿Quieres publicar algo?',
     'date_event'                    => 'Fecha del evento',
     'created_event'                 => 'Crear evento',
@@ -67,7 +67,7 @@ return [
     'error_created_event'           => 'Error al crear el evento',
     'check_form_error'              => 'Por favor revise el formulario a continuación para ver si hay errores',
     'select_img'                    => 'Selecciona una imagen',
-
+    
     'Showing'                       => 'Mostrando',
     'to'                            => 'de',
     'of'                            => 'de',
